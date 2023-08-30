@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1800px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
@@ -29,6 +29,8 @@ body {
     position: relative;
     padding-bottom: 50px;
     margin-bottom: 30px;
+
+    text-align: center;
 
     &::after {
         content: '';
@@ -362,6 +364,20 @@ nav {
 .container {
 }
 .banner {
+
+    .section-title {
+        display: none;
+        margin-bottom: 0;
+
+        &::after {
+            content: none;
+        }
+
+        @media (max-width: 996px) {
+            display: block;
+            text-align: center;
+        }
+    }
     // .banner__wrapper
     &__wrapper {
         margin-top: 20px;
@@ -649,7 +665,11 @@ nav {
             background-position: center;
 
             @media (max-width: 768px) {
-                display: none;
+                width: 60px;
+                height: 65px;
+                top: -80px;
+                right: 30%;
+                transform: rotate(100deg);
             }
         }
     }

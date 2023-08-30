@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1800px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -22,6 +22,7 @@ body {
   position: relative;
   padding-bottom: 50px;
   margin-bottom: 30px;
+  text-align: center;
 }
 .section-title::after {
   content: "";
@@ -296,6 +297,19 @@ nav {
   width: 100%;
 }
 
+.banner .section-title {
+  display: none;
+  margin-bottom: 0;
+}
+.banner .section-title::after {
+  content: none;
+}
+@media (max-width: 996px) {
+  .banner .section-title {
+    display: block;
+    text-align: center;
+  }
+}
 .banner__wrapper {
   margin-top: 20px;
 }
@@ -517,7 +531,11 @@ nav {
 }
 @media (max-width: 768px) {
   .footer__item::after {
-    display: none;
+    width: 60px;
+    height: 65px;
+    top: -80px;
+    right: 30%;
+    transform: rotate(100deg);
   }
 }
 .footer__title {
