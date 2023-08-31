@@ -312,6 +312,7 @@ nav {
 }
 .banner__wrapper {
   margin-top: 20px;
+  padding-bottom: 100px;
 }
 @media (max-width: 992px) {
   .banner__wrapper {
@@ -319,7 +320,9 @@ nav {
   }
 }
 .banner__img {
-  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: 80%;
   width: 100%;
 }
 .banner__wrap {
