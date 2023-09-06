@@ -33,7 +33,7 @@ body {
     text-align: center;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -59,7 +59,7 @@ body {
 
     position: relative;
     &::after {
-        content:'';
+        content: "";
         position: absolute;
         bottom: 0;
         right: 0;
@@ -74,7 +74,7 @@ body {
         }
     }
     &::before {
-        content:'';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -103,7 +103,7 @@ body {
     max-width: 280px;
     width: 100%;
 
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
         opacity: 0.8;
     }
@@ -273,7 +273,6 @@ nav {
 
 // HERO
 
-
 .hero {
     padding-top: 100px;
     // .hero__wrapper
@@ -301,7 +300,6 @@ nav {
         position: relative;
         padding-bottom: 50px;
         margin-bottom: 30px;
-
     }
     // .hero__inner
     &__inner {
@@ -352,24 +350,11 @@ nav {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // BANNER
 
 .container {
 }
 .banner {
-
     .section-title {
         display: none;
         margin-bottom: 0;
@@ -413,7 +398,6 @@ nav {
     }
 
     &__item {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -432,11 +416,6 @@ nav {
     }
 }
 
-
-
-
-
-
 // POSTER
 
 .poster {
@@ -451,22 +430,20 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
 
-    
-
     position: relative;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: -300px;
         right: 0;
         width: 300px;
         height: 100%;
         z-index: 2;
-        
+
         background-image: url(../img/poster-right.png);
         background-repeat: no-repeat;
         background-size: 400px;
-        background-position:center;
+        background-position: center;
 
         @media (max-width: 992px) {
             content: none;
@@ -474,18 +451,18 @@ nav {
     }
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -300px;
         left: -50px;
         width: 300px;
         height: 100%;
         z-index: 2;
-        
+
         background-image: url(../img/poster-left.png);
         background-repeat: no-repeat;
         background-size: 300px;
-        background-position:center;
+        background-position: center;
 
         @media (max-width: 992px) {
             content: none;
@@ -502,7 +479,6 @@ nav {
         @media (max-width: 992px) {
             grid-template-columns: 1fr;
         }
-       
     }
     // .poster__img
     &__img {
@@ -516,7 +492,6 @@ nav {
         img {
             max-width: 100%;
             width: 100%;
-            
         }
     }
     // .poster__title
@@ -527,24 +502,9 @@ nav {
         line-height: 1.1;
         text-align: center;
     }
-
-
-    
 }
 .container {
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // BOX
 
@@ -583,7 +543,7 @@ nav {
         }
     }
 
-    &__item-btns{
+    &__item-btns {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -611,7 +571,6 @@ nav {
     }
     // .box__item-text
     &__item-text {
-
         line-height: 1.2;
         // font-size: clamp(1.125rem, 0.622rem + 2.15vw, 2.5rem);
         font-size: clamp(1.125rem, 0.322rem + 2.05vw, 2.5rem);
@@ -619,13 +578,6 @@ nav {
         text-align: center;
     }
 }
-
-
-
-
-
-
-
 
 // FOOTER
 
@@ -645,14 +597,12 @@ nav {
 
         padding-bottom: 100px;
 
-
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
         }
 
-
         &::after {
-            content:'';
+            content: "";
             position: absolute;
             bottom: 0;
             left: 0;
@@ -663,10 +613,9 @@ nav {
     }
     // .footer__item
     &__item {
-
         position: relative;
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: -150px;
             right: 150px;
@@ -691,9 +640,8 @@ nav {
         font-size: clamp(2.188rem, 1.159rem + 4.39vw, 5rem);
         text-align: center;
         font-weight: 800;
-        
+
         span {
-            
             color: $mainGreen;
         }
     }
@@ -712,26 +660,11 @@ nav {
 .container {
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MODAL
 
 .modal {
     position: relative;
-    max-width: 500px;
+    max-width: max-content;
     width: 100%;
     margin: 0 auto;
 
@@ -749,7 +682,6 @@ nav {
         align-items: center;
         justify-content: center;
         gap: 10px;
-
     }
     // .modal__btn
     &__btn {
@@ -770,10 +702,20 @@ nav {
     }
     // .modal__content
     &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
 
         .btn {
             display: block;
             margin: 0 auto;
+            font-size: 20px;
+            margin-top: 20px;
         }
     }
     // .modal__text
@@ -781,5 +723,54 @@ nav {
         text-align: center;
         font-size: 25px;
         margin: 25px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    &__item-text {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &__item-price {
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+
+hr {
+    height: 2px;
+    width: 100%;
+    background: gray;
+    margin-bottom: 10px;
+}
+
+// MORE
+
+.more {
+    margin-bottom: 100px;
+
+    .section-title {
+        max-width: 300px;
+        margin: 20px auto;
+    }
+    // .more__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 850px;
+        width: 100%;
+
+        margin: 25px auto;
+
+    }
+    // .more__text
+    &__text {
     }
 }

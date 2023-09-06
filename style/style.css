@@ -567,7 +567,8 @@ nav {
 
 .modal {
   position: relative;
-  max-width: 500px;
+  max-width: -moz-max-content;
+  max-width: max-content;
   width: 100%;
   margin: 0 auto;
 }
@@ -593,12 +594,63 @@ nav {
   font-weight: 500;
   font-size: 30px;
 }
+.modal__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .modal__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .modal__content .btn {
   display: block;
   margin: 0 auto;
+  font-size: 20px;
+  margin-top: 20px;
 }
 .modal__text {
   text-align: center;
   font-size: 25px;
   margin: 25px 0;
+}
+.modal__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.modal__item-text {
+  font-size: 24px;
+  font-weight: 600;
+}
+.modal__item-price {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+hr {
+  height: 2px;
+  width: 100%;
+  background: gray;
+  margin-bottom: 10px;
+}
+
+.more {
+  margin-bottom: 100px;
+}
+.more .section-title {
+  max-width: 300px;
+  margin: 20px auto;
+}
+.more__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 850px;
+  width: 100%;
+  margin: 25px auto;
 }/*# sourceMappingURL=style.css.map */
